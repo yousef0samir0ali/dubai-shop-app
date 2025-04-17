@@ -1,0 +1,28 @@
+.banner {
+  width: 100%;
+  display: flex;
+  padding: 10px 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.banner img {
+  width: 49%;
+  height: 300px;
+}
+
+/* Media Quires  */
+
+@media (max-width: 991px) {
+  .banner {
+    flex-wrap: wrap;
+  }
+  .banner img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .banner {
+    padding: 15px;
+  }
+}

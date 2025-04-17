@@ -1,0 +1,25 @@
+.spinner {
+  height: calc(100vh - 250px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: darkblue;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

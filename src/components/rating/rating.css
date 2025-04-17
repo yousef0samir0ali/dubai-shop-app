@@ -1,0 +1,20 @@
+.rating-wrapper {
+  margin: 5px 0;
+}
+.rating-wrapper .rating {
+  color: var(--white-color);
+  background-color: var(--success-color);
+  padding: 0 4px;
+  border-radius: 7px;
+  margin-left: 10px;
+}
+.rating-wrapper .reviews {
+  color: var(--info-color);
+  font-weight: 600;
+}
+@media (max-width: 575px) {
+  .rating-wrapper {
+    margin: 5px 0;
+    font-size: 12px;
+  }
+}

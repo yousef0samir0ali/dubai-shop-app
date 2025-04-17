@@ -1,0 +1,127 @@
+/* Special Offers  */
+
+.special-offers {
+  padding: 10px 30px;
+}
+.special-offers-title {
+  font-size: 21px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+.special-offers-title span {
+  color: var(--strong-red-color);
+  margin-right: 10px;
+}
+.special-offers-title span i {
+  margin-left: 5px;
+}
+.special-offers-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Offer  */
+
+.offer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 49%;
+  height: 300px;
+  background-color: var(--white-color);
+  margin-bottom: 25px;
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+}
+.offer .image {
+  width: 40%;
+  height: 100%;
+}
+.offer .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.offer .info {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+}
+.offer .info h5 {
+  color: var(--primary-color);
+  font-size: 21px;
+  margin: 15px 0;
+}
+.offer .info .price {
+  margin: 10px 0;
+}
+.offer .info .price .item {
+  font-size: 21px;
+  color: var(--primary-color);
+}
+.offer .info .price .item:first-of-type {
+  color: var(--strong-red-color);
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+.offer .info .see-more {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white-color);
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border-radius: 2px 15px;
+  padding: 0px 10px;
+  margin-top: 5px;
+}
+.offer .info .discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--white-color);
+  background-color: var(--info-color);
+  border-radius: 50px;
+  padding: 0px 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Media Queries  */
+
+@media (max-width: 1199px) {
+  .offer .info h5 {
+    font-size: 17px;
+  }
+}
+@media (max-width: 991px) {
+  .offer {
+    width: 100%;
+  }
+  .offer .info h5 {
+    font-size: 21px;
+  }
+}
+@media (max-width: 575px) {
+  .special-offers-title {
+    font-size: 18px;
+  }
+  .special-offers {
+    padding: 15px;
+  }
+  .offer .info h5 {
+    font-size: 15px;
+    margin-top: 30px;
+  }
+
+  .offer .info .discount,
+  .offer .info .see-more,
+  .offer .info .price .item {
+    font-size: 18px;
+  }
+}
