@@ -6,7 +6,7 @@ export default function Brands() {
 
   async function getBrands() {
     try {
-      let res = await axios.get("http://localhost:5000/brands");
+      let res = await axios.get("https://json-dubai-api.glitch.me/brands");
       setBrands(res.data);
     } catch (error) {
       console.log(error);

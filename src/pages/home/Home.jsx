@@ -4,7 +4,7 @@ import SpecialOffers from "../../components/special-offers/SpecialOffers";
 import Slider from "../../components/slider/Slider";
 import HeadingTitle from "../../components/heading-title/HeadingTitle";
 import Brands from "../../components/brands/Brands";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../redux/apiCalls/productApiCall";
 

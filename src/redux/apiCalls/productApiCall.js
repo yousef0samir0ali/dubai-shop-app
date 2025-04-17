@@ -4,7 +4,7 @@ import { productActions } from "../slices/productSlice";
 export function fetchProducts() {
   return async (dispatch) => {
     try {
-      let res = await fetch("http://localhost:5000/products");
+      let res = await fetch("https://json-dubai-api.glitch.me/products");
       const data = await res.json();
       dispatch(productActions.setProducts(data));
     } catch (error) {
@@ -17,7 +17,7 @@ export function getProductById(productId) {
   return async (dispatch) => {
     try {
       dispatch(productActions.setLoading());
-      let res = await axios.get(`http://localhost:5000/products/${productId}`);
+      let res = await axios.get(`https://json-dubai-api.glitch.me/products/${productId}`);
       dispatch(productActions.setProduct(res.data));
       dispatch(productActions.clearLoading());
     } catch (error) {
@@ -30,7 +30,7 @@ export function getProductById(productId) {
 export function getCategories() {
   return async (dispatch) => {
     try {
-      let res = await axios.get("http://localhost:5000/categories");
+      let res = await axios.get("https://json-dubai-api.glitch.me/categories");
       dispatch(productActions.setCategories(res.data));
     } catch (error) {
       console.log(error);

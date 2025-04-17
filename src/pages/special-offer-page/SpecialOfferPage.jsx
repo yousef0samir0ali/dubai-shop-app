@@ -18,7 +18,7 @@ export default function SpecialOfferPage() {
   async function getSpecialOffersById(id) {
     try {
       setLoading(true);
-      let res = await axios.get(`http://localhost:5000/specialOffers/${id}`);
+      let res = await axios.get(`https://json-dubai-api.glitch.me/specialOffers/${id}`);
       setSpecialOffer(res.data);
       setLoading(false);
     } catch (error) {

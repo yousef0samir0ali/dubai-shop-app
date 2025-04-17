@@ -12,7 +12,7 @@ export default function SpecialOffers() {
 
   async function getSpecialOffers() {
     try {
-      let res = await axios.get("http://localhost:5000/specialOffers");
+      let res = await axios.get("https://json-dubai-api.glitch.me/specialOffers");
       dispatch(productActions.setSpecialOffers(res.data));
     } catch (error) {
       console.log(error);
