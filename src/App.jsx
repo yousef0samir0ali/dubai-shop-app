@@ -18,7 +18,7 @@ import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/dubai-shop-app">
         <ToastContainer autoClose={3000} />
         {/* <ScrollToTop /> */}
         <Header />
