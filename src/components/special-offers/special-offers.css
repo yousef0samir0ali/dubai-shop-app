@@ -22,6 +22,16 @@
   flex-wrap: wrap;
 }
 
+/* Skelton */
+.special-offers-skeleton {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.special-offers-skeleton-item {
+  width: 49%;
+}
 /* Offer  */
 
 .offer {
@@ -100,7 +110,8 @@
   }
 }
 @media (max-width: 991px) {
-  .offer {
+  .offer,
+  .special-offers-skeleton-item {
     width: 100%;
   }
   .offer .info h5 {
@@ -111,7 +122,8 @@
   .special-offers-title {
     font-size: 18px;
   }
-  .special-offers {
+  .special-offers,
+  .special-offers-skeleton {
     padding: 15px;
   }
   .offer .info h5 {

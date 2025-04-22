@@ -2,9 +2,13 @@ import { useState } from "react";
 import Rating from "../rating/Rating";
 import "./slider.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import Skeleton from "react-loading-skeleton";
 
 export default function Slider({ data }) {
   const [slideIndex, setSlideIndex] = useState(0);
+
+  const { productsLoading } = useSelector((state) => state.product);
 
   const handleClick = (direction) => {
     if (direction === "left") {
@@ -12,7 +16,15 @@ export default function Slider({ data }) {
     } else setSlideIndex(slideIndex + 1);
   };
 
-  return (
+  const SliderSkeleton = () => (
+    <div style={{ width: "100%", padding: "10px 20px" }}>
+      <Skeleton height={380} baseColor="#e0e0e0" highlightColor="#f5f5f5" borderRadius={15} />
+    </div>
+  );
+
+  return productsLoading ? (
+    <SliderSkeleton />
+  ) : (
     <div className="slider-container">
       <button
         onClick={() => handleClick("left")}

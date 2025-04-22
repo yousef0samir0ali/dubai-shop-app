@@ -29,26 +29,44 @@
   color: var(--primary-color);
 }
 
+/* Category Skelton  */
+
+.category-skeleton {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.category-skeleton-item {
+  width: 15%;
+}
+
 /* Media Queries */
 
 @media (max-width: 1199px) {
-  .categories .category {
+  .categories .category,
+  .category-skelton-item {
     width: 26%;
   }
 }
 @media (max-width: 767px) {
-  .categories {
+  .categories,
+  .category-skeleton {
     padding: 15px;
   }
-  .categories .category {
+  .categories .category,
+  .category-skeleton-item {
     width: 45%;
   }
 }
 @media (max-width: 575px) {
-  .categories {
+  .categories,
+  .category-skeleton {
     justify-content: center;
   }
-  .categories .category {
+  .categories .category,
+  .category-skeleton-item {
     width: 80%;
   }
 }

@@ -20,14 +20,29 @@
   height: 100%;
   object-fit: contain;
 }
+/* Brands Skelton  */
+
+.brands-skeleton {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+}
+
+.brands-skeleton-item {
+  width: 24%;
+  margin-bottom: 20px;
+}
 
 /* Media Queries */
 
 @media (max-width: 767px) {
-  .brands {
+  .brands,
+  .brands-skeleton {
     padding: 15px;
   }
-  .brand {
+  .brand,
+  .brands-skeleton-item {
     width: 48%;
   }
 }

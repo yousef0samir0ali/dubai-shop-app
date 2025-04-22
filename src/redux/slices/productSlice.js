@@ -4,14 +4,20 @@ const productSlice = createSlice({
   name: "product",
   initialState: {
     products: [],
+    productsLoading: true,
     product: null,
     loading: false,
-    categories: [],
     specialOffers: [],
   },
   reducers: {
     setProducts(state, action) {
       state.products = action.payload;
+    },
+    setProductsLoading(state) {
+      state.productsLoading = true;
+    },
+    clearProductsLoading(state) {
+      state.productsLoading = false;
     },
     setProduct(state, action) {
       state.product = action.payload;
@@ -22,9 +28,7 @@ const productSlice = createSlice({
     clearLoading(state) {
       state.loading = false;
     },
-    setCategories(state, action) {
-      state.categories = action.payload;
-    },
+
     setSpecialOffers(state, action) {
       state.specialOffers = action.payload;
     },

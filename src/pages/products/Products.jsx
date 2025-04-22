@@ -5,10 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../redux/apiCalls/productApiCall";
 import "./products.css";
 import Pagination from "./pagination/Pagination";
+import Skeleton from "react-loading-skeleton";
 
 export default function Products() {
   const dispatch = useDispatch();
-  const { products } = useSelector((state) => state.product);
+  const { products, productsLoading } = useSelector((state) => state.product);
   const [filterItem, setFilterItem] = useState("all");
   const [sortItem, setSortItem] = useState("select");
   const [currentPage, setCurrentPage] = useState(1);
@@ -40,7 +41,15 @@ export default function Products() {
   const finishIndex = currentPage * PRODUCT_PER_PAGE;
   const finalProducts = sortedProduct.slice(startIndex, finishIndex);
 
-  return (
+  const SliderSkeleton = () => (
+    <div style={{ width: "100%", padding: "10px 20px" }}>
+      <Skeleton height={400} baseColor="#e0e0e0" highlightColor="#f5f5f5" borderRadius={15} />
+    </div>
+  );
+
+  return productsLoading ? (
+    <SliderSkeleton />
+  ) : (
     <>
       <div className="products">
         <ProductSideBar
